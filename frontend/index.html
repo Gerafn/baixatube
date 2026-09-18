@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BaixaTube — Baixar Vídeos e Músicas do YouTube em Alta Qualidade</title>
+  <meta name="description" content="Baixe vídeos em MP4 (1080p, 720p) e músicas em MP3 (320kbps) do YouTube de forma rápida, gratuita e sem anúncios.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff0033'><path d='M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z'/></svg>">
+</head>
+<body>
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <!-- Header -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <div class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="brand-title">Baixa<span class="highlight">Tube</span></span>
+          <span class="brand-badge">PRO</span>
+        </div>
+      </div>
+
+      <div class="nav-actions">
+        <button id="btnBackendConfig" class="pill-btn" title="Configurações do Servidor">
+          <span class="status-dot online"></span>
+          <span id="backendStatusText">Servidor Conectado</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="container main-content">
+    
+    <!-- Hero Header -->
+    <section class="hero-section">
+      <div class="tagline-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        1080p Full HD & Áudio MP3 320kbps
+      </div>
+      <h1 class="hero-title">Baixe seus vídeos e músicas favoritos</h1>
+      <p class="hero-subtitle">Cole o link do YouTube abaixo e escolha o formato e a resolução com velocidade máxima.</p>
+
+      <!-- Input Box -->
+      <div class="search-wrapper">
+        <div class="search-box">
+          <div class="search-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          </div>
+          <input 
+            type="url" 
+            id="urlInput" 
+            placeholder="Cole o link do YouTube aqui (ex: https://youtube.com/watch?v=...)"
+            autocomplete="off"
+            spellcheck="false"
+          >
+          <button id="btnPaste" class="icon-action-btn" title="Colar link copiado">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+            <span>Colar</span>
+          </button>
+          <button id="btnFetch" class="btn-primary">
+            <span class="btn-text">Buscar</span>
+            <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
+        </div>
+        <div id="inputError" class="input-error-msg hidden"></div>
+      </div>
+    </section>
+
+    <!-- Loading Skeleton -->
+    <div id="loaderCard" class="glass-card skeleton-card hidden">
+      <div class="skeleton-thumb shimmer"></div>
+      <div class="skeleton-details">
+        <div class="skeleton-line title shimmer"></div>
+        <div class="skeleton-line sub shimmer"></div>
+        <div class="skeleton-line opt shimmer"></div>
+      </div>
+    </div>
+
+    <!-- Video Preview & Format Selection Card -->
+    <div id="resultCard" class="glass-card result-card hidden">
+      <div class="result-header">
+        <div class="video-thumb-container">
+          <img id="videoThumb" src="" alt="Thumbnail do Vídeo" class="video-thumb">
+          <span id="videoDuration" class="duration-badge">00:00</span>
+        </div>
+        <div class="video-info">
+          <h2 id="videoTitle" class="video-title">Título do Vídeo</h2>
+          <div class="video-meta">
+            <span id="videoChannel" class="meta-item channel">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              Canal
+            </span>
+            <span id="videoViews" class="meta-item views">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+              Visualizações
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Format Mode Selector Tabs -->
+      <div class="format-tabs">
+        <button id="tabVideo" class="tab-btn active" data-type="video">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="15" x="2" y="3" rx="2"/><circle cx="12" cy="10" r="2.5"/><path d="m22 7-6 4 6 4V7z"/></svg>
+          <span>Vídeo (MP4)</span>
+        </button>
+        <button id="tabAudio" class="tab-btn" data-type="audio">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+          <span>Áudio / Música (MP3)</span>
+        </button>
+      </div>
+
+      <!-- Quality Selection Grid -->
+      <div class="quality-section">
+        <label class="section-label">Escolha a Resolução / Qualidade:</label>
+        
+        <!-- Video Qualities -->
+        <div id="videoQualityGrid" class="quality-grid">
+          <!-- Injetado dinamicamente via JS -->
+        </div>
+
+        <!-- Audio Qualities -->
+        <div id="audioQualityGrid" class="quality-grid hidden">
+          <!-- Injetado dinamicamente via JS -->
+        </div>
+      </div>
+
+      <!-- Start Download Action Button -->
+      <div class="action-footer">
+        <button id="btnStartDownload" class="btn-primary btn-large">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+          <span id="downloadBtnLabel">Baixar Agora</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Download Progress Card -->
+    <div id="progressCard" class="glass-card progress-card hidden">
+      <div class="progress-top">
+        <div class="progress-info-title">
+          <span class="spinner-small" id="progressSpinner"></span>
+          <span id="progressStatusText">Iniciando download...</span>
+        </div>
+        <span id="progressPercent" class="percent-label">0%</span>
+      </div>
+
+      <div class="progress-bar-bg">
+        <div id="progressBarFill" class="progress-bar-fill" style="width: 0%;"></div>
+      </div>
+
+      <div class="progress-stats">
+        <div class="stat-box">
+          <span class="stat-label">Velocidade</span>
+          <span id="statSpeed" class="stat-value">-- MB/s</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-label">Tempo Restante</span>
+          <span id="statEta" class="stat-value">--:--</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-label">Tamanho</span>
+          <span id="statSize" class="stat-value">Processando</span>
+        </div>
+      </div>
+
+      <!-- Success Action Box -->
+      <div id="downloadFinishedActions" class="finished-actions hidden">
+        <a id="btnSaveFile" href="#" class="btn-success btn-large" download>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+          <span>Salvar Arquivo no Dispositivo</span>
+        </a>
+        <button id="btnNewDownload" class="btn-secondary">
+          <span>Baixar Outro Vídeo</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Features Highlights -->
+    <section class="features-grid">
+      <div class="feature-item">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <h3>100% Gratuito</h3>
+        <p>Sem anúncios intrusivos, sem limites e sem necessidade de cadastro.</p>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <h3>Conversão Ultrarrápida</h3>
+        <p>Processamento direto com FFmpeg garantindo a máxima fidelidade de áudio e vídeo.</p>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Áudio de Alta Resolução</h3>
+        <p>MP3 em 320kbps com capa e metadados preservados para o seu reprodutor.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Config Modal (Backend URL for Vercel) -->
+  <div id="configModal" class="modal-overlay hidden">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Configurações do Servidor</h3>
+        <button id="btnCloseModal" class="close-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-desc">
+          Se o frontend estiver hospedado na <strong>Vercel</strong>, informe o endereço da sua API de download (hospedada no Render, Railway ou túnel):
+        </p>
+        <div class="form-group">
+          <label for="inputBackendUrl">URL da API Backend:</label>
+          <input type="text" id="inputBackendUrl" placeholder="Ex: https://meu-backend.onrender.com">
+          <span class="field-hint">Deixe em branco para usar o servidor local padrão.</span>
+        </div>
+        <div class="modal-actions">
+          <button id="btnSaveConfig" class="btn-primary">Salvar Configuração</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Geraldo Falk — Versão 1.0</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
