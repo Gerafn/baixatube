@@ -14,6 +14,25 @@ Aplicação Web moderna, elegante e de alta performance para baixar vídeos em *
 
 ---
 
+## 💻 Aplicativo Desktop & Instalador para Windows (.EXE)
+
+Com a versão Desktop, você **não precisa de nenhuma hospedagem**! O aplicativo roda diretamente no Windows como um programa nativo com janela própria, atalho na Área de Trabalho e FFmpeg embutido.
+
+### Opção A: Gerar o Instalador Automaticamente via GitHub (Sem precisar de PC Windows)
+O repositório já inclui um fluxo de automação do **GitHub Actions**:
+1. Acesse seu repositório: [https://github.com/Gerafn/baixatube](https://github.com/Gerafn/baixatube)
+2. Vá na aba **Actions** ➔ **Gerar Instalador Windows**.
+3. Clique em **Run workflow** (ou envie uma nova tag `v1.0.1`).
+4. O GitHub utilizará uma máquina Windows na nuvem para compilar o executável e o arquivo **`Instalador_BaixaTube_v1.0.exe`** estará pronto para download direto!
+
+### Opção B: Compilar em qualquer computador Windows (1 Duplo Clique)
+1. Baixe a pasta do projeto no Windows.
+2. Dê dois cliques no arquivo:
+   👉 **`build_windows.bat`**
+3. Ele baixará automaticamente o FFmpeg para Windows, instalará os pacotes e gerará a pasta `dist\BaixaTube\BaixaTube.exe` e o `Instalador_BaixaTube_v1.0.exe`.
+
+---
+
 ## 🚀 Como Rodar Localmente no seu Mac (1 Clique)
 
 Você pode rodar agora mesmo no seu computador sem precisar configurar nada:
