@@ -44,9 +44,8 @@ jobs:
           pyinstaller --noconsole --onedir --name "BaixaTube" --add-data "frontend;frontend" --add-data "backend;backend" --add-data "bin;bin" desktop.py --clean -y
 
       - name: Instalar Inno Setup
-        uses: choco-github-actions/action-chocolatey@appveyor
-        with:
-          args: 'install innosetup -y'
+        run: |
+          choco install innosetup -y
 
       - name: Compilar Instalador .EXE com Inno Setup
         run: |
